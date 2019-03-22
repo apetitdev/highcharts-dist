@@ -2,12 +2,12 @@
   "name": "highcharts",
   "description": "JavaScript charting framework",
   "homepage": "http://www.highcharts.com",
-  "version": "7.0.3",
+  "version": "7.0.4",
   "author": "Highsoft AS <support@highcharts.com> (http://www.highcharts.com/about)",
   "main": "highcharts.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/highcharts/highcharts-dist"
+    "url": "https://github.com/apetitdev/highcharts-dist"
   },
   "keywords": [
     "charts",
