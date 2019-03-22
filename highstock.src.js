@@ -52256,14 +52256,19 @@
              *
              * @return {number} Minimum from all series
              */
-            getBaseSeriesMin: function (currentSeriesMin) {
-                return this.baseSeries.reduce(
-                    function (min, series) {
-                        return Math.min(min, series.xData[0]);
-                    },
-                    currentSeriesMin
-                );
-            },
+             getBaseSeriesMin: function (currentSeriesMin) {
+                 try {
+                     return this.baseSeries.reduce(
+                         function (min, series) {
+                             // (#10193)
+                               return Math.min(min, series.xData ? series.xData[0] : min);
+                         },
+                         currentSeriesMin
+                       );
+                 } catch {
+                     return;
+                 }
+             },
 
             /**
              * Set the navigator x axis extremes to reflect the total. The navigator
